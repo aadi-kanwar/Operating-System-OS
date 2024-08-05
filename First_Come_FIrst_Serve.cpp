@@ -39,8 +39,7 @@ void findavgTime(int processes[], int n, int bt[])
     printf("Average turn around time = %.2f\n", (float)total_tat / (float)n);
 }
 
-// Rearrange the processes according to the burst time
-void sjfScheduling(int processes[], int n, int bt[])
+void fcfsScheduling(int processes[], int n, int bt[])
 {
     findavgTime(processes, n, bt);
 }
@@ -50,6 +49,6 @@ int main()
     int processes[] = {1, 2, 3, 4};
     int n = sizeof(processes) / sizeof(processes[0]);
     int burst_time[] = {21, 3, 6, 2};
-    sjfScheduling(processes, n, burst_time);
+    fcfsScheduling(processes, n, burst_time);
     return 0;
 }
