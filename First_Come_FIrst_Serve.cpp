@@ -1,4 +1,5 @@
 // First Come First Serve Scheduling Algorithm
+// 05.08.2024
 
 #include<stdio.h>
 #include<conio.h>
@@ -33,10 +34,6 @@ void findavgTime(int processes[], int n, int bt[])
         total_wt = total_wt + wt[i];
         total_tat = total_tat + tat[i];
         printf("%d \t\t %d \t\t %d \t\t %d\n", processes[i], bt[i], wt[i], tat[i]);
-        // printf(" %d ", (i + 1));
-        // printf(" %d ", bt[i]);
-        // printf(" %d ", wt[i]);
-        // printf(" %d\n", tat[i]);
     }
     printf("Average waiting time = %.2f\n", (float)total_wt / (float)n);
     printf("Average turn around time = %.2f\n", (float)total_tat / (float)n);
