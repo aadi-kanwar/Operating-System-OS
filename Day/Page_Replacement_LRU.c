@@ -19,24 +19,24 @@ int findLRU(int time[], int n)
 
 int main()
 {
-    int no_of_frames, no_of_pages, frames[3], pages[13]={7,0,1,2,0,3,0,4,2,3,0,3,2}, counter =0, time[3], flag1, flag2, i, j, pos, faults = 0;
+    int no_of_frames, no_of_pages, frames[3], pages[13], counter =0, time[3], flag1, flag2, i, j, pos, faults = 0;
     printf("Enter the number of frames: ");
     scanf("%d", &no_of_frames);
     printf("Enter the number of pages: ");
     scanf("%d", &no_of_pages);
     printf("Enter the page reference string: ");
-    for(i=0; i<no_of_pages; i++)
+    for(i=0; i<no_of_pages; ++i)
     {
         scanf("%d", &pages[i]);
     }
-    for(i=0; i<no_of_frames; i++)
+    for(i=0; i<no_of_frames; ++i)
     {
         frames[i] = -1;
     }
     for(i=0;i<no_of_pages;++i)
     {
         flag1 = flag2 = 0;
-        for(j=0; j<no_of_frames; j++)
+        for(j=0; j<no_of_frames; ++j)
         {
             if(frames[j] == pages[i])
             {
@@ -48,7 +48,7 @@ int main()
         }
         if(flag1 == 0)
         {
-            for(j=0; j<no_of_frames; j++)
+            for(j=0; j<no_of_frames; ++j)
             {
                 if(frames[j] == -1)
                 {
@@ -71,18 +71,18 @@ int main()
         }
         // Display frames after each page reference
         printf("\nFrames:");
-        for(j=0; j<no_of_frames; j++)
+        for(j=0; j<no_of_frames; ++j)
         {
             if(frames[j] == -1)
             {
-                printf(" - ");
+                printf("- ");
             }
             else
             {
-                printf("%d", frames[j]);
+                printf("%d ", frames[j]);
             }
         }
-        printf("\n\nTotal Page Faults = %d\n", faults);
-        return 0;
     }
+    printf("\n\nTotal Page Faults = %d\n", faults);
+    return 0;
 }
