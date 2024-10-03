@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Projects/Operating-System-OS",
-      "program": "d:/Projects/Operating-System-OS/build/Debug/outDebug",
+      "cwd": "d:/Projects/Operating-System-OS/August/26.08.2024",
+      "program": "d:/Projects/Operating-System-OS/August/26.08.2024/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
